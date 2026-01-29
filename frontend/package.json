@@ -1,0 +1,23 @@
+{
+  "name": "frontend-peliculas",
+  "version": "1.0.0",
+  "description": "Frontend para Gestor de Películas",
+  "main": "serve.js",
+  "type": "module",
+  "scripts": {
+    "start": "node serve.js",
+    "dev": "node serve.js",
+    "open": "open http://localhost:8080 || xdg-open http://localhost:8080 || start http://localhost:8080"
+  },
+  "keywords": [
+    "frontend",
+    "peliculas",
+    "bootstrap",
+    "javascript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

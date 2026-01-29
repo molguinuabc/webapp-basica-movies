@@ -1,0 +1,56 @@
+# ============================================
+# .gitignore para Frontend
+# ============================================
+
+# Dependencias de Node.js (si se instalan)
+node_modules/
+
+# Archivos de entorno
+.env
+.env.local
+.env.development.local
+.env.production.local
+
+# Archivos de caché y build
+.cache/
+dist/
+build/
+out/
+
+# Archivos generados por herramientas de desarrollo
+.vite/
+.parcel-cache/
+.next/
+.nuxt/
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos de editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos de log
+*.log
+logs/
+
+# Archivos temporales
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Archivos de cobertura de pruebas
+coverage/
+.nyc_output/
+
+# Nota: Este frontend es básico (HTML/JS/CSS) por lo que
+# no genera muchos archivos que necesiten ser ignorados.
+
+# Si se agregan herramientas de build (Webpack, Vite, etc.),
+# agregar sus archivos de caché y output aquí.

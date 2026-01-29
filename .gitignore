@@ -1,0 +1,177 @@
+# ============================================
+# ARCHIVO .gitignore PARA PROYECTO COMPLETO
+# Backend + Frontend
+# ============================================
+
+# ============================================
+# BACKEND
+# ============================================
+
+# Dependencias de Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Base de datos SQLite
+backend/database/peliculas.db
+*.db
+
+# Archivos de entorno
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# Editor y archivos temporales
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.tmp
+*.temp
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+logs/
+*.log
+
+# Cobertura de pruebas
+coverage/
+.nyc_output/
+
+# Archivos temporales
+tmp/
+temp/
+
+# Archivos de conversación del agente
+.new_coding_agent_conversation.json
+
+# ============================================
+# FRONTEND
+# ============================================
+
+# Dependencias de Node.js (si se usan)
+frontend/node_modules/
+
+# Archivos de entorno del frontend
+frontend/.env
+frontend/.env.local
+
+# Archivos de caché del navegador
+.cache/
+dist/
+build/
+
+# Archivos generados por servidores de desarrollo
+frontend/.vite/
+frontend/.parcel-cache/
+
+# Archivos de configuración específicos de IDEs
+frontend/.vscode/
+frontend/.idea/
+
+# Archivos de sistema operativo en frontend
+frontend/.DS_Store
+frontend/Thumbs.db
+
+# ============================================
+# GENERAL
+# ============================================
+
+# Archivos de configuración personalizados
+*.local
+*.local.*
+
+# Archivos de backup
+*.bak
+*.backup
+
+# Archivos de paquetes de sistema
+*.pkg
+*.dmg
+
+# Archivos comprimidos (excepto si son necesarios)
+*.zip
+*.tar.gz
+*.rar
+
+# Archivos de documentación generada
+docs/_build/
+docs/_site/
+
+# Archivos de sesión
+*.session
+*.session.*
+
+# Archivos de lock específicos del sistema
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Nota: package-lock.json y yarn.lock SÍ deben versionarse
+# para garantizar dependencias consistentes, pero algunos
+# equipos prefieren no versionarlos. Aquí los incluimos
+# para ser explícitos sobre qué ignorar.
+
+# ============================================
+# EXCEPCIONES - ARCHIVOS QUE SÍ DEBEN VERSIONARSE
+# ============================================
+
+# Estos son ejemplos de lo que NO debería ignorarse:
+# !backend/package.json
+# !backend/package-lock.json  # Comentar si se quiere versionar
+# !frontend/package.json
+# !frontend/package-lock.json  # Comentar si se quiere versionar
+# !backend/database/           # La carpeta sí, pero no el .db
+# !backend/database/schema.sql # Los esquemas de BD sí deben versionarse
+
+# ============================================
+# REGLAS ESPECÍFICAS PARA CARPETAS
+# ============================================
+
+# Ignorar todo en carpetas de dependencias
+**/node_modules/
+
+# Ignorar archivos de base de datos SQLite en cualquier lugar
+**/*.db
+
+# Ignorar archivos de log en cualquier lugar
+**/*.log
+
+# Ignorar archivos de entorno en cualquier lugar
+**/.env
+**/.env.*
+
+# ============================================
+# NOTAS IMPORTANTES
+# ============================================
+
+# 1. La base de datos peliculas.db NO debe versionarse
+#    - Contiene datos que pueden ser sensibles
+#    - Puede ser muy grande
+#    - Cada desarrollador debe tener su propia instancia
+
+# 2. Los node_modules/ NO deben versionarse
+#    - Se pueden regenerar con npm install
+#    - Son muy grandes
+#    - Dependen del sistema operativo
+
+# 3. Los archivos de entorno (.env) NO deben versionarse
+#    - Contienen credenciales y configuraciones sensibles
+#    - Cada entorno (dev, prod, test) tiene su propio .env
+
+# 4. Los archivos generados por el IDE pueden ignorarse
+#    - Son específicos de cada desarrollador
+#    - Pueden causar conflictos
+
+# 5. CONSIDERAR versionar:
+#    - package-lock.json / yarn.lock (para dependencias consistentes)
+#    - Si decides versionarlos, comenta las líneas correspondientes arriba
