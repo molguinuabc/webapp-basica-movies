@@ -5,7 +5,7 @@ Este proyecto consiste en una aplicación web completa para gestionar películas
 ## Estructura del Proyecto
 
 ```
-ejemplo-frontend-backend/
+webapp-basica-movies/
 ├── backend/          # API REST con Node.js, Express y SQLite
 └── frontend/         # Aplicación web con HTML, JavaScript y Bootstrap
 ```
@@ -57,7 +57,7 @@ cd frontend
 npm start
 ```
 
-El frontend estará disponible en: `http://localhost:8080`
+El frontend estará disponible en: `http://localhost:8181`
 
 ## Verificación del Sistema
 
@@ -70,7 +70,7 @@ curl http://localhost:3000/api/peliculas
 Deberías ver una respuesta JSON con las películas de ejemplo.
 
 ### 2. Verificar que el frontend funciona:
-- Abre `http://localhost:8080` en tu navegador
+- Abre `http://localhost:8181` en tu navegador
 - Deberías ver la interfaz del gestor de películas
 - Las películas de ejemplo deberían cargarse automáticamente
 
