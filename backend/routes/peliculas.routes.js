@@ -2,6 +2,10 @@ import { Router } from 'express';
 import { PeliculaController } from '../controllers/pelicula.controller.js';
 
 const router = Router();
+router.use((res, req, next) => {
+    console.log(`Petición recibida en /api/peliculas: ${res.method} ${res.url}`);
+    next();
+})
 
 // Ruta para obtener todas las películas
 router.get('/', PeliculaController.obtenerTodas);
