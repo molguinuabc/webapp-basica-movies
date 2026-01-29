@@ -39,18 +39,18 @@ export class PeliculaController {
   // Crear una nueva película
   static async crear(req, res) {
     try {
-      const { titulo, director, anio, genero, duracion, calificacion } = req.body;
+      const { titulo, director, año, genero, duracion, calificacion } = req.body;
       
       // Validar campos requeridos
-      if (!titulo || !director || !anio || !genero) {
+      if (!titulo || !director || !año || !genero) {
         return res.status(400).json({ 
           error: 'Datos incompletos',
-          mensaje: 'Los campos titulo, director, anio y genero son requeridos'
+          mensaje: 'Los campos titulo, director, año y genero son requeridos'
         });
       }
       
       // Validar tipos de datos
-      if (typeof anio !== 'number' || anio < 1888 || anio > new Date().getFullYear() + 5) {
+      if (typeof año !== 'number' || año < 1888 || año > new Date().getFullYear() + 5) {
         return res.status(400).json({ 
           error: 'Año inválido',
           mensaje: 'El año debe ser un número válido'
@@ -71,7 +71,7 @@ export class PeliculaController {
         });
       }
       
-      const nuevaPelicula = { titulo, director, anio, genero, duracion, calificacion };
+      const nuevaPelicula = { titulo, director, año, genero, duracion, calificacion };
       const peliculaCreada = await PeliculaModel.crear(nuevaPelicula);
       
       res.status(201).json({
@@ -101,7 +101,7 @@ export class PeliculaController {
       }
       
       // Validar tipos de datos si se proporcionan
-      if (datosActualizados.anio && (typeof datosActualizados.anio !== 'number' || datosActualizados.anio < 1888)) {
+      if (datosActualizados.año && (typeof datosActualizados.año !== 'number' || datosActualizados.año < 1888)) {
         return res.status(400).json({ 
           error: 'Año inválido',
           mensaje: 'El año debe ser un número válido'

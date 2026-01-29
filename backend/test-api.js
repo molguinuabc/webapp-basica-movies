@@ -24,7 +24,7 @@ async function probarAPI() {
     const nuevaPelicula = {
       titulo: "Interstellar",
       director: "Christopher Nolan",
-      anio: 2014,
+      año: 2014,
       genero: "Ciencia Ficción",
       duracion: 169,
       calificacion: 8.6

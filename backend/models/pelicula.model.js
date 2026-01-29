@@ -30,12 +30,12 @@ export class PeliculaModel {
   // Crear una nueva película
   static async crear(pelicula) {
     try {
-      const { titulo, director, anio, genero, duracion, calificacion } = pelicula;
+      const { titulo, director, año, genero, duracion, calificacion } = pelicula;
       
       const db = await obtenerConexion();
       const resultado = await db.run(
-        'INSERT INTO peliculas (titulo, director, anio, genero, duracion, calificacion) VALUES (?, ?, ?, ?, ?, ?)',
-        [titulo, director, anio, genero, duracion, calificacion]
+        'INSERT INTO peliculas (titulo, director, año, genero, duracion, calificacion) VALUES (?, ?, ?, ?, ?, ?)',
+        [titulo, director, año, genero, duracion, calificacion]
       );
       
       await db.close();

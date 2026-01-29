@@ -81,7 +81,7 @@ POST /api/peliculas
 {
   "titulo": "Nombre de la película",
   "director": "Nombre del director",
-  "anio": 2023,
+  "año": 2023,
   "genero": "Género",
   "duracion": 120,
   "calificacion": 8.5
@@ -106,7 +106,7 @@ DELETE /api/peliculas/:id
   "id": 1,
   "titulo": "El Padrino",
   "director": "Francis Ford Coppola",
-  "anio": 1972,
+  "año": 1972,
   "genero": "Drama",
   "duracion": 175,
   "calificacion": 9.2,
@@ -116,8 +116,8 @@ DELETE /api/peliculas/:id
 
 ## Validaciones
 
-- `titulo`, `director`, `anio`, `genero`: Requeridos
-- `anio`: Número válido (1888 - año actual + 5)
+- `titulo`, `director`, `año`, `genero`: Requeridos
+- `año`: Número válido (1888 - año actual + 5)
 - `duracion`: Número positivo (opcional)
 - `calificacion`: Número entre 0 y 10 (opcional)
 
@@ -135,7 +135,7 @@ curl -X POST http://localhost:3000/api/peliculas \
   -d '{
     "titulo": "Inception",
     "director": "Christopher Nolan",
-    "anio": 2010,
+    "año": 2010,
     "genero": "Ciencia Ficción",
     "duracion": 148,
     "calificacion": 8.8

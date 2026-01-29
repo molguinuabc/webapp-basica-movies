@@ -18,7 +18,7 @@ export async function inicializarBaseDeDatos() {
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         titulo TEXT NOT NULL,
         director TEXT NOT NULL,
-        anio INTEGER NOT NULL,
+        año INTEGER NOT NULL,
         genero TEXT NOT NULL,
         duracion INTEGER,
         calificacion REAL,
@@ -33,7 +33,7 @@ export async function inicializarBaseDeDatos() {
     
     if (conteo.total === 0) {
       await db.exec(`
-        INSERT INTO peliculas (titulo, director, anio, genero, duracion, calificacion) VALUES
+        INSERT INTO peliculas (titulo, director, año, genero, duracion, calificacion) VALUES
         ('El Padrino', 'Francis Ford Coppola', 1972, 'Drama', 175, 9.2),
         ('Pulp Fiction', 'Quentin Tarantino', 1994, 'Crimen', 154, 8.9),
         ('El Señor de los Anillos: El Retorno del Rey', 'Peter Jackson', 2003, 'Fantasía', 201, 8.9),
