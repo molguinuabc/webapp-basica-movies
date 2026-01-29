@@ -128,7 +128,7 @@ frontend/
   "id": 1,
   "titulo": "El Padrino",
   "director": "Francis Ford Coppola",
-  "anio": 1972,
+  "año": 1972,
   "genero": "Drama",
   "duracion": 175,
   "calificacion": 9.2,

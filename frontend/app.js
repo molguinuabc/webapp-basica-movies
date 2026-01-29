@@ -26,7 +26,7 @@ const elementos = {
     peliculaId: document.getElementById('pelicula-id'),
     titulo: document.getElementById('titulo'),
     director: document.getElementById('director'),
-    anio: document.getElementById('anio'),
+    año: document.getElementById('año'),
     genero: document.getElementById('genero'),
     duracion: document.getElementById('duracion'),
     calificacion: document.getElementById('calificacion')
@@ -168,7 +168,7 @@ function mostrarPeliculas(listaPeliculas) {
         fila.innerHTML = `
             <td><strong>${pelicula.titulo}</strong></td>
             <td>${pelicula.director}</td>
-            <td>${pelicula.anio}</td>
+            <td>${pelicula.año}</td>
             <td><span class="badge bg-secondary">${pelicula.genero}</span></td>
             <td>${pelicula.duracion ? `${pelicula.duracion} min` : '-'}</td>
             <td>
@@ -232,7 +232,7 @@ function prepararEdicion(pelicula) {
     elementos.peliculaId.value = pelicula.id;
     elementos.titulo.value = pelicula.titulo;
     elementos.director.value = pelicula.director;
-    elementos.anio.value = pelicula.anio;
+    elementos.año.value = pelicula.año;
     elementos.genero.value = pelicula.genero;
     elementos.duracion.value = pelicula.duracion || '';
     elementos.calificacion.value = pelicula.calificacion || '';
@@ -281,7 +281,7 @@ async function manejarSubmitFormulario(e) {
     const datosPelicula = {
         titulo: elementos.titulo.value.trim(),
         director: elementos.director.value.trim(),
-        anio: parseInt(elementos.anio.value),
+        año: parseInt(elementos.año.value),
         genero: elementos.genero.value,
         duracion: elementos.duracion.value ? parseInt(elementos.duracion.value) : null,
         calificacion: elementos.calificacion.value ? parseFloat(elementos.calificacion.value) : null
@@ -311,7 +311,7 @@ function validarFormulario() {
     const camposRequeridos = [
         { elemento: elementos.titulo, mensaje: 'El título es requerido' },
         { elemento: elementos.director, mensaje: 'El director es requerido' },
-        { elemento: elementos.anio, mensaje: 'El año es requerido' },
+        { elemento: elementos.año, mensaje: 'El año es requerido' },
         { elemento: elementos.genero, mensaje: 'El género es requerido' }
     ];
     
@@ -325,9 +325,9 @@ function validarFormulario() {
     });
     
     // Validar año
-    const anio = parseInt(elementos.anio.value);
-    if (anio < 1888 || anio > 2030) {
-        marcarInvalido(elementos.anio, 'El año debe estar entre 1888 y 2030');
+    const año = parseInt(elementos.año.value);
+    if (año < 1888 || año > 2030) {
+        marcarInvalido(elementos.año, 'El año debe estar entre 1888 y 2030');
         valido = false;
     }
     

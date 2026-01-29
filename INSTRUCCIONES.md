@@ -148,7 +148,7 @@ curl -X POST http://localhost:3000/api/peliculas \
   -d '{
     "titulo": "Inception",
     "director": "Christopher Nolan",
-    "anio": 2010,
+    "año": 2010,
     "genero": "Ciencia Ficción",
     "duracion": 148,
     "calificacion": 8.8
@@ -176,7 +176,7 @@ curl -X PUT http://localhost:3000/api/peliculas/1 \
   "id": 1,
   "titulo": "El Padrino",
   "director": "Francis Ford Coppola",
-  "anio": 1972,
+  "año": 1972,
   "genero": "Drama",
   "duracion": 175,
   "calificacion": 9.2,
